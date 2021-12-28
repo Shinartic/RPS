@@ -7,12 +7,10 @@ scissors = ("scissors")
 options = [rock, paper, scissors]
 Pscore = 0
 Mscore = 0
-games_amount = 3
 
 def Game():
         global Pscore
         global Mscore
-        global games_amount
 
         userinput = input("rock, paper, scissors shoot!: ")
 
@@ -46,11 +44,11 @@ def Game():
                 print("Tie")
         else:
                 print("Invalid input, try again")
-                games_amount += 1
+                print(" ")
+                Game()
 
-        print("  ")
-
-for x in range(games_amount):
+for x in range(3):
+        print(" ")
         Game()
 
 
